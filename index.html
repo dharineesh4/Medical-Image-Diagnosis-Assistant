@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Diagnosis Assistant</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Medical Diagnosis using X-Ray</h1>
+            <p>Upload a Chest X-ray or Retinal Image for instant analysis.</p>
+        </header>
+
+        <main>
+            <div class="upload-section">
+                <div class="drop-zone" id="drop-zone">
+                    <span class="drop-zone__prompt">Drag & Drop image here or <span
+                            class="browse-link">Browse</span></span>
+                    <input type="file" name="file" class="drop-zone__input" id="file-input" accept="image/*">
+                </div>
+                <div id="preview-container" class="hidden">
+                    <img id="image-preview" src="" alt="Image Preview">
+                    <button id="remove-btn" class="secondary-btn">Remove</button>
+                </div>
+                <button id="analyze-btn" class="primary-btn" disabled>Analyze Image</button>
+            </div>
+
+            <div class="results-section hidden" id="results-section">
+                <h2>Analysis Results</h2>
+                <div id="loader" class="loader hidden"></div>
+                <div id="results-grid" class="results-grid">
+                    <!-- Results will be injected here -->
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
